@@ -1,0 +1,5068 @@
+{
+    "id": "b57c96f1c2f44aa56ef001a90bbc9831",
+    "name": "Box",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "90dcad90d19f5fa9fd29b72a7b912182",
+            "name": "File upload preflight check",
+            "url": "httpsapi.box.com\/2.0\/files\/content",
+            "description": "The Pre-flight check API will verify that a file will be accepted by Box before you send all the bytes over the wire.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "options",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "4b78035fe0b994d0bbeb785772045674",
+            "name": "Get File's Info, Get Embed Link",
+            "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}",
+            "description": "Used to retrieve the metadata about a file.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "0e8dd2727deacd199cf883f21f3d09a3",
+            "name": "Update File Info, Lock and Unlock, Create Shared Link",
+            "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}",
+            "description": "Used to update individual or multiple fields in the file object, including renaming the file, changing its description, and creating a shared link for the file. To move a file, change the ID of its parent folder. An optional If-Match header can be included to prevent race conditions.\n\nTo lock and unlock files, you execute a PUT operation on the \/files\/{file id} endpoint and set or clear the lock properties on the file.\n\nUsed to create a shared link for this particular file. Please see here for m",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "If",
+                    "description": "The etag of the file can be included as an ???If-Match??? header to prevent race conditions.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "9ef354564ac6339a6f38c3de600af776",
+            "name": "Delete File",
+            "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}",
+            "description": "Discards a file to the trash. The etag of the file can be included as an ???If-Match??? header to prevent race conditions.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "If",
+                    "description": "The etag of the file can be included as an ???If-Match??? header to prevent race conditions.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "acfa29480717c8456ffc7f374636c87f",
+            "name": "Restore Item",
+            "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}",
+            "description": "Restores an item that has been moved to the trash. Default behavior is to restore the item to the folder it was in before it was moved to the trash. If that parent folder no longer exists or if there is now an item with the same name in that parent folder, the new parent folder and\/or new name will need to be included in the request.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "bea01097a70cceaa0999da68e64953c9",
+            "name": "Download File",
+            "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/content",
+            "description": "Retrieves the actual data of the file. An optional version parameter can be set to download a previous version of the file.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Range",
+                    "description": "The range value in bytes. Format should be bytes={start_range}-{end_range}",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "version",
+                    "description": "The ID specific version of this file to download.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "BoxApi",
+                    "description": "The shared link for this item. Format should be shared_link=SHARED_LINK",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "dacf4eb021047aa32217b633194dfac2",
+            "name": "View Versions",
+            "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/versions",
+            "description": "If there are previous versions of this file, this method can be used to retrieve information about the older versions. (Versions are only tracked for Box users with premium accounts.)",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "aeb8e100065a94b9d6deeebb4445441b",
+            "name": "Promote Version",
+            "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/versions\/current",
+            "description": "If there are previous versions of this file, this method can be used to promote one of the older versions to the top of the stack. This actually mints a copy of the old version and puts it on the top of the versions stack. The file will have the exact same contents, the same SHA1\/etag, and the same name as the original. Other properties such as comments do not get updated to their former values.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "7fde2e404b32af750bb122521dee796d",
+            "name": "Delete Old Version",
+            "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/versions\/{VERSION_ID}",
+            "description": "Discards a specific file version to the trash. (Depending on the enterprise settings for this user, the item will either be actually deleted from Box or moved to the trash.)",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "VERSION_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "If",
+                    "description": "The etag of the file can be included as an ???If-Match??? header to prevent race conditions.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "71b25804a38c15342127d2162d196e6a",
+            "name": "Copy File",
+            "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/copy",
+            "description": "Used to create a copy of a file in another folder. The original version of the file will not be altered.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "4e76bb93a309357ab3ecba1a62522588",
+            "name": "Get Thumbnail",
+            "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/thumbnail.{EXTENSION}",
+            "description": "Retrieves a thumbnail, or smaller image representation, of this file. Sizes of 32x32,64x64, 128x128, and 256x256 can be returned in the .png format and sizes of 32x32, 94x94, 160x160, and 320x320 can be returned in the .jpg format. Thumbnails can be generated for the image and video file formats listed here.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "EXTENSION",
+                    "description": "The preview format, e.g. png or jpg",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "min_height",
+                    "description": "The minimum height of the thumbnail",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "min_width",
+                    "description": "The minimum width of the thumbnail",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "max_height",
+                    "description": "The maximum height of the thumbnail",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "max_width",
+                    "description": "The maximum width of the thumbnail",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "8987d1d47e56292db0cb3914e6c73f84",
+            "name": "Get Trashed File",
+            "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/trash",
+            "description": "Retrieves an item that has been moved to the trash.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "805853d0f3875db1474081c6220e5f87",
+            "name": "Permanently Delete",
+            "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/trash",
+            "description": "Permanently deletes an item that is in the trash. The item will no longer exist in Box. This action cannot be undone.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "03b1c15d4d6c5fa95d6f2d373b7859ad",
+            "name": "Get File's Comments",
+            "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/comments",
+            "description": "Retrieves the comments on a particular file, if any exist.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "efe516d50a5395c1b0dc8d12782ae669",
+            "name": "Get File's Collaborations",
+            "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/collaborations",
+            "description": "Use this to get a list of all the collaborations on a file",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "The maximum number of items to return in a page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "The item at which to begin the response",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "4dd929cb3548d8b7fb148ee2179f5c29",
+            "name": "Get File's Tasks",
+            "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/tasks",
+            "description": "Retrieves all of the tasks for given file.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "293cd974db6e957ade41a53759136e10",
+            "name": "Create Folder",
+            "url": "httpsapi.box.com\/2.0\/folders",
+            "description": "Used to create a new empty folder. The new folder will be created inside of the specified parent folder",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "a46fa5d311310a099a19044cfcb99f36",
+            "name": "Get Folder's Info",
+            "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}",
+            "description": "Retrieves the full metadata about a folder, including information about when it was last updated as well as the files and folders contained in it. The root folder of a Box account is always represented by the id ???0???.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "FOLDER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "eb10143d829e43798a940ca667428651",
+            "name": "Update Folder, Create Shared Link, Create or Delete",
+            "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}",
+            "description": "Used to update information about the folder. To move a folder, update the ID of its parent. To enable an email address that can be used to upload files to this folder, update the folder_upload_email attribute. An optional If-Match header can be included to ensure that client only updates the folder if it knows about the latest version.\n\nUsed to create a shared link for this particular folder. Please see here for more information on the permissions available for shared links. In order to get defa",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FOLDER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "If",
+                    "description": "The etag of the file can be included as an ???If-Match??? header to prevent race conditions.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "28a31e4122e9ce3b7a05ec01aa0bba28",
+            "name": "Delete Folder",
+            "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}",
+            "description": "Used to delete a folder. A recursive parameter must be included in order to delete folders that have items inside of them. An optional If-Match header can be included to ensure that client only deletes the folder if it knows about the latest version.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FOLDER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "recursive",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "If",
+                    "description": "The etag of the file can be included as an ???If-Match??? header to prevent race conditions.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "e36a7ee708229886fdb9a1b271903b97",
+            "name": "Restore Folder",
+            "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}",
+            "description": "Restores an item that has been moved to the trash. Default behavior is to restore the item to the folder it was in before it was moved to the trash. If that parent folder no longer exists or if there is now an item with the same name in that parent folder, the new parent folder and\/or new name will need to be included in the request.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FOLDER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "2c0c9109a827a0b46de85a7807169de4",
+            "name": "Get Folder???s Items",
+            "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/items",
+            "description": "Retrieves the files and\/or folders contained within this folder without any other metadata about the folder. Any attribute in the full files or folders objects can be passed in with the fields parameter to get specific attributes, and only those specific attributes back; otherwise, the mini format is returned for each item by default. Multiple attributes can be passed in separated by commas e.g. fields=name,created_at. Paginated results can be retrieved using the limit and offset parameters.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FOLDER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "The maximum number of items to return in a page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "The item at which to begin the response",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "6bf9d54cab1dc88a307c91a5a2d7cb7b",
+            "name": "Copy Folder",
+            "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/copy",
+            "description": "Used to create a copy of a folder in another folder. The original version of the folder will not be altered.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FOLDER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "72ea9921d041739944a3608f38eee075",
+            "name": "Get Folder Collaborations",
+            "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/collaborations",
+            "description": "Use this to get a list of all the collaborations on a folder i.e. all of the users that have access to that folder.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FOLDER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "The maximum number of items to return in a page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "The item at which to begin the response",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "5725d7dc1ffb91389c4960c500f0c2ea",
+            "name": "Get Trashed Folder",
+            "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/trash",
+            "description": "Retrieves an folder that has been moved to the trash.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FOLDER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "bc4d95b0ce3915bbf1481430b21c7ca6",
+            "name": "Permanently Delete",
+            "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/trash",
+            "description": "Permanently deletes an folder that is in the trash. The item will no longer exist in Box. This action cannot be undone.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FOLDER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "f319dae124d7e0effe7d3babb77c93fb",
+            "name": "Get Trashed Items",
+            "url": "httpsapi.box.com\/2.0\/folders\/trash\/items",
+            "description": "Retrieves the files and\/or folders that have been moved to the trash. Any attribute in the full files or folders objects can be passed in with the fields parameter to get specific attributes, and only those specific attributes back; otherwise, the mini format is returned for each item by default. Multiple attributes can be passed in separated by commas e.g. fields=name,created_at. Paginated results can be retrieved using the limit and offset parameters.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "The maximum number of items to return in a page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "The item at which to begin the response",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "c2a9520d033295f9c55237305a0c28c0",
+            "name": "Get Watermark on File",
+            "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/watermark",
+            "description": "Used to retrieve the watermark for a corresponding Box file.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "b19cf4e298f1dd4f956d33d5d63939bd",
+            "name": "Apply Watermark on File",
+            "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/watermark",
+            "description": "Used to apply or update the watermark for a corresponding Box file. The endpoint accepts a JSON body describing the watermark to apply.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "c151b59bf798a5043d8c8c7afa11e746",
+            "name": "Remove Watermark on File",
+            "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/watermark",
+            "description": "Used to remove the watermark for a corresponding Box file.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "4bd802b163e1de761ad5f4f7cfc06987",
+            "name": "Get Watermark on Folder",
+            "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/watermark",
+            "description": "Used to retrieve the watermark for a corresponding Box folder.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FOLDER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "80a7d18ba403158275803aa1166b9d97",
+            "name": "Apply Watermark on Folder",
+            "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/watermark",
+            "description": "Used to apply or update the watermark for a corresponding Box folder. The endpoints accepts a JSON body describing the watermark to apply.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FOLDER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "a341fb80d9398ab393f3585bb7cef20d",
+            "name": "Remove Watermark on Folder",
+            "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/watermark",
+            "description": "Used to remove the watermark for a corresponding Box Folder.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FOLDER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "e414afb589249d9897577b0408ae9d5a",
+            "name": "Create Web Link",
+            "url": "httpsapi.box.com\/2.0\/web_links",
+            "description": "Creates a web link object within a given folder.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "3f74b03a123187f5695579d77ce973f9",
+            "name": "Get Web Link",
+            "url": "httpsapi.box.com\/2.0\/web_links\/{WEB_LINK_ID}",
+            "description": "Use to get information about the web link.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "WEB_LINK_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "63e716dcd69ba1ed940be6f0d94b81e2",
+            "name": "Update Web Link",
+            "url": "httpsapi.box.com\/2.0\/web_links\/{WEB_LINK_ID}",
+            "description": "Updates information for a web link.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "WEB_LINK_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "d338fa99339a9121e11cfbb3938cc2ac",
+            "name": "Delete Web Link",
+            "url": "httpsapi.box.com\/2.0\/web_links\/{WEB_LINK_ID}",
+            "description": "Deletes a web link and moves it to the trash",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "WEB_LINK_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "d5a81715974d9550452cc31f0b35cec1",
+            "name": "Create Metadata Template",
+            "url": "httpsapi.box.com\/2.0\/metadata_templates\/schema",
+            "description": "Used to create a new metadata template with the specified schema.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "ef3d20e3473a93001476619a2bee2bc3",
+            "name": "Get Enterprise Metadata",
+            "url": "httpsapi.box.com\/2.0\/metadata_templates\/{SCOPE}",
+            "description": "Used to retrieve all metadata templates within a user's enterprise. Currently only the enterprise scope is supported.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "SCOPE",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "9382b3f9a74836b66e6d0e8b8acb06c0",
+            "name": "Get Metadata Template",
+            "url": "httpsapi.box.com\/2.0\/metadata_templates\/{SCOPE}\/{TEMPLATE}\/schema",
+            "description": "Used to retrieve the schema for a given metadata template.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "SCOPE",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "TEMPLATE",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "5102c12b8b7f991aa66b5f47068b4e17",
+            "name": "Update Metadata Template",
+            "url": "httpsapi.box.com\/2.0\/metadata_templates\/{SCOPE}\/{TEMPLATE}\/schema",
+            "description": "Used to update the schema of an existing template.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "SCOPE",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "TEMPLATE",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "ec45037705278ddcf80307e5b8077b64",
+            "name": "Get all Metadata on File",
+            "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/metadata",
+            "description": "Used to retrieve all metadata associated with a given file",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "4257365511d15d76190a3418fdc9ed3e",
+            "name": "Create Metadata on File",
+            "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/metadata\/{SCOPE}\/{TEMPLATE}",
+            "description": "Used to create the metadata template instance for a corresponding Box file. When creating metadata, only values that adhere to the metadata template schema will be accepted.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "SCOPE",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "TEMPLATE",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "2cfb9431ebb73d1cdd14bb812d42f8d0",
+            "name": "Get Metadata on File",
+            "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/metadata\/{SCOPE}\/{TEMPLATE}",
+            "description": "Used to retrieve the metadata template instance for a corresponding Box file.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "SCOPE",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "TEMPLATE",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "53f1ea3cd3a83589e40708195bd49cff",
+            "name": "Update Metadata on File",
+            "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/metadata\/{SCOPE}\/{TEMPLATE}",
+            "description": "Used to update the template instance. The request body must follow the JSON-Patch specification, which is represented as a JSON array of operation objects (see examples for more details). Updates can be either add, replace, remove , test, move, or copy. The template instance can only be updated if the template instance already exists. When editing metadata, only values that adhere to the metadata template schema will be accepted.\nThe update is applied atomically. If any errors occur during the a",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "SCOPE",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "TEMPLATE",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "7a4775849891ce359da5bb5f990ae529",
+            "name": "Delete Metadata on File",
+            "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/metadata\/{SCOPE}\/{TEMPLATE}",
+            "description": "Used to delete the template instance. To delete custom key:value pairs within a template instance, you should refer to the updating metadata section.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "SCOPE",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "TEMPLATE",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "088e1ff12dc453b37d3c76448de52380",
+            "name": "Get All Metadata on Folder",
+            "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/metadata",
+            "description": "Used to retrieve all metadata associated with a given folder",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FOLDER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "9d6c9e4d803e7d27cad78f0928521b9a",
+            "name": "Create Metadata on Folder",
+            "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/metadata\/{SCOPE}\/{TEMPLATE}",
+            "description": "Used to create the metadata template instance for a corresponding Box folder. When creating metadata, only values that adhere to the metadata template schema will be accepted.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FOLDER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "SCOPE",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "TEMPLATE",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "7edeeb81a997c45d0abfaf9fc8b79134",
+            "name": "Get Metadata on Folder",
+            "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/metadata\/{SCOPE}\/{TEMPLATE}",
+            "description": "Used to retrieve the metadata template instance for a corresponding Box folder.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FOLDER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "SCOPE",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "TEMPLATE",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "890c8eff63e29d371b2bafe412f8115a",
+            "name": "Update Metadata on Folder",
+            "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/metadata\/{SCOPE}\/{TEMPLATE}",
+            "description": "Used to update the template instance. Updates can be either add, replace, remove , or test. The template instance can only be updated if the template instance already exists. When editing metadata, only values that adhere to the metadata template schema will be accepted.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FOLDER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "SCOPE",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "TEMPLATE",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "6dea973f2d5c2b26cf2b34e1821b0377",
+            "name": "Delete Metadata on Folder",
+            "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/metadata\/{SCOPE}\/{TEMPLATE}",
+            "description": "Used to delete the template instance. To delete custom key:value pairs within a template instance, you should refer to the updating metadata section.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FOLDER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "SCOPE",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "TEMPLATE",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "c26349e4edd705cf5b007c0828048ffa",
+            "name": "Pending Collaborations",
+            "url": "httpsapi.box.com\/2.0\/collaborations",
+            "description": "Used to retrieve all pending collaboration invites for this user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "status",
+                    "description": "Must be 'pending'",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "b1d6ee66ef44d5d6266204315d736111",
+            "name": "Create Collaboration",
+            "url": "httpsapi.box.com\/2.0\/collaborations",
+            "description": "Used to add a collaboration for a single user or a single group to a folder. Either an email address, a user ID, or a group id can be used to create the collaboration. If the collaboration is being created with a group, access to this endpoint is granted based on the group's invitability_level.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "dfb0a291c877f81158eeb6ef76efbc6e",
+            "name": "Get Collaboration",
+            "url": "httpsapi.box.com\/2.0\/collaborations\/{COLLAB_ID}",
+            "description": "Used to get information about a single collaboration. All collaborations for a single folder can be retrieved through GET \/folders\/{id}\/collaborations. A complete list of the user???s pending collaborations can also be retrieved.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "COLLAB_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "status",
+                    "description": "Must be 'pending'",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "fdb3899310e4507b26982e9d35c164be",
+            "name": "Update Collaboration",
+            "url": "httpsapi.box.com\/2.0\/collaborations\/{COLLAB_ID}",
+            "description": "Used to edit an existing collaboration. Descriptions of the various roles can be found here.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "COLLAB_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "98a29f445a73911f3b3dad619e89c88b",
+            "name": "Delete Collaboration",
+            "url": "httpsapi.box.com\/2.0\/collaborations\/{COLLAB_ID}",
+            "description": "Used to delete a single collaboration.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "COLLAB_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "845aa4578eaa7ba4dcd02595bea09701",
+            "name": "Searching for Content",
+            "url": "httpsapi.box.com\/2.0\/search",
+            "description": "The search endpoint provides a powerful way of finding items that are accessible by a single user or an entire enterprise. Leverage the parameters listed below to generate targeted advanced searches.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "query",
+                    "description": "The string to search for; can be matched against item names, descriptions, text content of a file, and other fields of the different item types.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "scope",
+                    "description": "The scope for which you want to limit your search to. Can be user_content for a search limited to only the current user or enterprise_content for the entire enterprise. To enable the enterprise_content scope for an administrator, please contact us.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "file_extensions",
+                    "description": "Limit searches to specific file extensions like pdf,png,doc. Requires one or a set of comma delimited file extensions: file_extension_1,file_extension_2,....",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "created_at_range",
+                    "description": "The date for when the item was created. Specify the date range by using RFC3339 timestamp variables separated by a comma: from_date,to_date (e.g 2014-05-15T13:35:01-07:00,2014-05-17T13:35:01-07:00). Trailing from_date, and leading ,to_date commas are also accepted, where the current date and earliest known date will be designated respectively.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "updated_at_range",
+                    "description": "The date for when the item was last updated. Specify the date range by using RFC3339 variables separated by a comma: from_date,to_date(e.g 2014-05-15T13:35:01-07:00,2014-05-17T13:35:01-07:00). Trailing from_date, and leading ,to_date commas are also accepted, where the current date and earliest known date will be designated respectively.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "size_range",
+                    "description": "Filter by a file size range. Specify the file size range in bytes separated by a comma:lower_bound_size,upper_bound_size, where 1MB is equivalent to 1000000 bytes. Trailing lower_bound_size, and leading ,upper_bound_size commas are also accepted as parameters.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "owner_user_ids",
+                    "description": "Search by item owners. Requires one or a set of comma delimited user_ids: user_id_1,user_id_2,...",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ancestor_folder_ids",
+                    "description": "Limit searches to specific parent folders. Requires one or a set of comma delimited folder_ids: folder_id_1,folder_id_2,.... Parent folder results will also include items within subfolders.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "content_types",
+                    "description": "Limit searches to specific Box designated content types. Can be name, description, file_content, comments, or tags. Requires one or a set of comma delimited content_types: content_type_1,content_type_2,....",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "type",
+                    "description": "The type you want to return in your search. Can be file, folder, or web_link.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "trash_content",
+                    "description": "Allows you to search within the trash. Can be trashed_only or non_trashed_only. Searches without this parameter default to non_trashed_only.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "mdfilters",
+                    "description": "Filters for a specific metadata template for files with metadata object associations. The filters are to be placed in a single JSON object. Please refer the MDFilters object in the definitions section of the swagger.json",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "The maximum number of items to return in a page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "The item at which to begin the response",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "6c855acad5d0db212a5c702e42fdc26b",
+            "name": "Shared Items",
+            "url": "httpsapi.box.com\/2.0\/shared_items",
+            "description": "Shared items are any files or folders that are represented by a shared link. Shared items are different from other API resources in that a shared resource doesn???t necessarily have to be in the account of the user accessing it. The actual shared link itself is used along with a normal access token.\nUsed to retrieve the metadata about a shared item when only given a shared link. Because of varying permission for shared links, a password may be required to retrieve the shared item. Once the item ",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "BoxApi",
+                    "description": "The shared link for this item. Format should be shared_link=SHARED_LINK",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "df700b0d2ea8f3acc4ecac3947a7f552",
+            "name": "Get Collections",
+            "url": "httpsapi.box.com\/2.0\/collections",
+            "description": "Retrieves the collections for the given user. Currently, only the favorites collection is supported.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "5db08d9d2c60980f7167ea85786b05f6",
+            "name": "Get Collection Items",
+            "url": "httpsapi.box.com\/2.0\/collections\/{COLLECTION_ID}\/items",
+            "description": "Retrieves the files and\/or folders contained within this collection. Collection item lists behave a lot like getting a folder???s items.\nPaginated results can be retrieved using the limit and offset parameters.\nSub-object fields can be requested via the ?fields parameter",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "COLLECTION_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "The maximum number of items to return in a page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "The item at which to begin the response",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "633239c04dbe11fd1d979c1cb9d96388",
+            "name": "Create Comment",
+            "url": "httpsapi.box.com\/2.0\/comments",
+            "description": "Used to add a comment by the user to a specific file or comment (i.e. as a reply comment).",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "28be7c5f7b6b938689175f8ba47d4df0",
+            "name": "Get Comment",
+            "url": "httpsapi.box.com\/2.0\/comments\/{COMMENT_ID}",
+            "description": "Used to retrieve the message and metadata about a specific comment. Information about the user who created the comment is also included.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "COMMENT_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "44dc95e2c2f8a20648f4875ca46235df",
+            "name": "Update Comment",
+            "url": "httpsapi.box.com\/2.0\/comments\/{COMMENT_ID}",
+            "description": "Used to update the message of the comment.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "COMMENT_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "f1dd7e43eab1fac8c583df6ed3b973f9",
+            "name": "Delete Comment",
+            "url": "httpsapi.box.com\/2.0\/comments\/{COMMENT_ID}",
+            "description": "Permanently deletes a comment.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "COMMENT_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "c548a63e2039237fa581b02d35824152",
+            "name": "Create Task",
+            "url": "httpsapi.box.com\/2.0\/tasks",
+            "description": "Used to create a single task for single user on a single file.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "ba4b81040d0f10518fb67f0f50ffdd52",
+            "name": "Get Task",
+            "url": "httpsapi.box.com\/2.0\/tasks\/{TASK_ID}",
+            "description": "Fetches a specific task.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "TASK_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "c332e7186e837f8e51dfd3fc5f510371",
+            "name": "Update Task",
+            "url": "httpsapi.box.com\/2.0\/tasks\/{TASK_ID}",
+            "description": "Updates a specific task.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "TASK_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "f083854d164d8c697a24d0e810e471cf",
+            "name": "Delete Task",
+            "url": "httpsapi.box.com\/2.0\/tasks\/{TASK_ID}",
+            "description": "Permanently deletes a specific task.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "TASK_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "831ef89c9cd7e94670459eb25d54f447",
+            "name": "Get Assignments",
+            "url": "httpsapi.box.com\/2.0\/tasks\/{TASK_ID}\/assignments",
+            "description": "Retrieves all of the assignments for a given task.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "TASK_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "e987c26e33b205f93c181c99477d72ef",
+            "name": "Create Task Assignment",
+            "url": "httpsapi.box.com\/2.0\/task_assignments",
+            "description": "Used to assign a task to a single user. There can be multiple assignments on a given task.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "9330286ff1f224fda4cbd05eeedc6b6d",
+            "name": "Get Task Assignment",
+            "url": "httpsapi.box.com\/2.0\/task_assignments\/{TASK_ASSIGNMENT_ID}",
+            "description": "Fetches a specific task assignment.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "TASK_ASSIGNMENT_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "f7cae517e692420426ae07b4ac880755",
+            "name": "Update Task Assignment",
+            "url": "httpsapi.box.com\/2.0\/task_assignments\/{TASK_ASSIGNMENT_ID}",
+            "description": "Used to update a task assignment.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "TASK_ASSIGNMENT_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "44880facb56917d868ffcc5a1bed2a5e",
+            "name": "Delete Task Assignment",
+            "url": "httpsapi.box.com\/2.0\/task_assignments\/{TASK_ASSIGNMENT_ID}",
+            "description": "Deletes a specific task assignment.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "TASK_ASSIGNMENT_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "fd4034e3b466b82e5bb5554e2076f7f5",
+            "name": "User Events, Enterprise Events",
+            "url": "httpsapi.box.com\/2.0\/events",
+            "description": "Use this to get events for a given user. A chunk of event objects is returned for the user based on the parameters passed in. Parameters indicating how many chunks are left as well as the next stream_position are also returned.\n\nTo retrieve Enterprise Events specify 'stream_type=admin_logs'. Retrieves up to a year' events for all users in an enterprise. Upper and lower bounds as well as filters can be applied to the results.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "stream_position",
+                    "description": "The location in the event stream at which you want to start receiving events. Can specify special case ???now??? to get 0 events and the latest stream position for initialization.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "stream_type",
+                    "description": "Limits the type of events returned: all: returns everything, changes: returns tree changes, sync: returns tree changes only for sync folders",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "The maximum number of items to return in a page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "event_type",
+                    "description": "A comma-separated list of events to filter by",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "created_after",
+                    "description": "A lower bound on the timestamp of the events returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "created_before",
+                    "description": "An upper bound on the timestamp of the events returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "685311057ede94d15e32ac655c355b91",
+            "name": "Long polling",
+            "url": "httpsapi.box.com\/2.0\/events",
+            "description": "To get real-time notification of activity in a Box account, use the long poll feature of the \/events API. To do so, first call the \/events API with an OPTIONS call to retrieve the long poll URL to use. Next, make a GET request to the provided URL to begin listening for events. If an event occurs within an account you are monitoring, you will receive a response with the value new_change. It???s important to note that this response will not come with any other details, but should serve as a prompt",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "options",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "36f23da5b11f270632366b1b918e59e5",
+            "name": "Create User",
+            "url": "httpsapi.box.com\/2.0\/users",
+            "description": "Used to provision a new user in an enterprise. This method only works for enterprise admins.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "1cdfb5b095085ce6197f6458ee0e7294",
+            "name": "Get Enterprise Users",
+            "url": "httpsapi.box.com\/2.0\/users",
+            "description": "Returns a list of all users for the Enterprise along with their user_id, public_name, and login.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter_term",
+                    "description": "A string used to filter the results to only users starting with the filter_term in either the name or the login.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "The maximum number of items to return in a page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "The item at which to begin the response",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_type",
+                    "description": "The type of user to search for. Valid values are all, external or managed.  If nothing is provided, the default behavior will be managed only",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "ac5860e2282b1f556daca2e8de376370",
+            "name": "Get Current User",
+            "url": "httpsapi.box.com\/2.0\/users\/me",
+            "description": "Retrieves information about the user who is currently logged in i.e. the user for whom this auth token was generated.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "6f62245c7d4e4426478ea98331c70bc2",
+            "name": "Get User's Info",
+            "url": "httpsapi.box.com\/2.0\/users\/{USER_ID}",
+            "description": "Retrieves information about a user in the enterprise. Requires enterprise administration authorization.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "USER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "95d2ea1123883862f8f1f0460722532e",
+            "name": "Update User, Change User's Login",
+            "url": "httpsapi.box.com\/2.0\/users\/{USER_ID}",
+            "description": "Used to edit the settings and information about a user. This method only works for enterprise admins. To roll a user out of the enterprise (and convert them to a standalone free user), update the special enterprise attribute to be null.\n\nUsed to convert one of the user???s confirmed email aliases into the user???s primary login.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "USER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "551a489cba12308bdccdef437f8c5e45",
+            "name": "Delete User",
+            "url": "httpsapi.box.com\/2.0\/users\/{USER_ID}",
+            "description": "Deletes a user in an enterprise account.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "USER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "notify",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "force",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "c25e63255119b0d25e82385959db065a",
+            "name": "Move User's Folder",
+            "url": "httpsapi.box.com\/2.0\/users\/{USER_ID}\/folders\/{FOLDER_ID}",
+            "description": "Moves all of the owned content from within one user???s folder into a new folder in another user???s account. You can move folders across users as long as the you have administrative permissions and the ???source??? user owns the folders. To move everything from the root folder, use ???0??? which always represents the root folder of a Box account.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "USER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "FOLDER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "notify",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "1e5dcdd66a8fbdeb47e40c218fb5fc85",
+            "name": "Get Email Aliases",
+            "url": "httpsapi.box.com\/2.0\/users\/{USER_ID}\/email_aliases",
+            "description": "Retrieves all email aliases for this user. The collection of email aliases does not include the primary login for the user; use GET \/users\/USER_ID to retrieve the login email address.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "USER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "369e9b66a969296049ca185e9f2be823",
+            "name": "Add Email Alias",
+            "url": "httpsapi.box.com\/2.0\/users\/{USER_ID}\/email_aliases",
+            "description": "Adds a new email alias to the given user???s account.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "USER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "d391d26423275748e186f4662f976e24",
+            "name": "Delete Email Alias",
+            "url": "httpsapi.box.com\/2.0\/users\/{USER_ID}\/email_aliases\/{EMAIL_ALIAS_ID}",
+            "description": "Removes an email alias from a user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "USER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "EMAIL_ALIAS_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "70c104134f116758564fe0f6233b9a43",
+            "name": "Invite User",
+            "url": "httpsapi.box.com\/2.0\/invites",
+            "description": "Invites an existing user to join an Enterprise. The existing user can not be part of another Enterprise and must already have a Box account. Once invited, the user will receive an email and prompt to accept the invitation within the Box web application. This method requires the \"Manage An Enterprise\" scope for the enterprise, which can be enabled within your developer console.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "e80fce33a8337c57ebeb523bcc823bd4",
+            "name": "Get status of the invite",
+            "url": "httpsapi.box.com\/2.0\/invites\/{INVITE_ID}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "INVITE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "5d9a211f0b127795dde63bc36c9bffe3",
+            "name": "Create Group",
+            "url": "httpsapi.box.com\/2.0\/groups",
+            "description": "Used to create a group.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "57cc6f0d2c3733a3e9c9a916f1ea3722",
+            "name": "Get Groups for an Enterprise",
+            "url": "httpsapi.box.com\/2.0\/groups",
+            "description": "Retrieves all of the groups for given enterprise. Must have permissions to see an enterprise's groups.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "The maximum number of items to return in a page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "The item at which to begin the response",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "415bbb17d372fa40b3cbe0bf58444b6b",
+            "name": "Get Group",
+            "url": "httpsapi.box.com\/2.0\/groups\/{GROUP_ID}",
+            "description": "Used to get information about a group.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "GROUP_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "50efa641a01031d99e2c4d35af4ed504",
+            "name": "Update Group",
+            "url": "httpsapi.box.com\/2.0\/groups\/{GROUP_ID}",
+            "description": "Updates a specific group.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "GROUP_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "b4b5f715e0b5911e64acc623db745865",
+            "name": "Delete Group",
+            "url": "httpsapi.box.com\/2.0\/groups\/{GROUP_ID}",
+            "description": "Permanently deletes a specific group.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "GROUP_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "30a853e8e8a0768aa81f14a05c99535c",
+            "name": "Create Membership",
+            "url": "httpsapi.box.com\/2.0\/group_memberships",
+            "description": "Used to add a member to a Group.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "e619019e823f56077c6f6fc56c31e815",
+            "name": "Get Membership",
+            "url": "httpsapi.box.com\/2.0\/group_memberships\/{GROUP_MEMBERSHIP_ID}",
+            "description": "Fetches a specific group membership entry.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "GROUP_MEMBERSHIP_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "62697170e8184114e8cf90501bb389d2",
+            "name": "Update Membership",
+            "url": "httpsapi.box.com\/2.0\/group_memberships\/{GROUP_MEMBERSHIP_ID}",
+            "description": "Used to update a group membership.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "GROUP_MEMBERSHIP_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "3886a7b1b763c596c84457609ccc2007",
+            "name": "Delete Membership",
+            "url": "httpsapi.box.com\/2.0\/group_memberships\/{GROUP_MEMBERSHIP_ID}",
+            "description": "Deletes a specific group membership.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "GROUP_MEMBERSHIP_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "73ea9d0a8a48d8a3d8eb587ae4d69f03",
+            "name": "Get Memberships for Group",
+            "url": "httpsapi.box.com\/2.0\/groups\/{GROUP_ID}\/memberships",
+            "description": "Retrieves all of the members for a given group if the requesting user has access (see Group Object member_viewability_level).",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "GROUP_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "The maximum number of items to return in a page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "The item at which to begin the response",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "2e8f32c2fadb551031d87b4a5610a1e7",
+            "name": "Get Memberships for User",
+            "url": "httpsapi.box.com\/2.0\/users\/{USER_ID}\/memberships",
+            "description": "Retrieves all of the group memberships for a given user. Note this is only available to group admins. To retrieve group memberships for the user making the API request, use the users\/me\/memberships endpoint.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "USER_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "The maximum number of items to return in a page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "The item at which to begin the response",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "1121cae6c5aa1ab3fa1951c1ea8fb942",
+            "name": "Get Collaborations for Group",
+            "url": "httpsapi.box.com\/2.0\/groups\/{GROUP_ID}\/collaborations",
+            "description": "Retrieves all of the group collaborations for a given group. Note this is only available to group admins.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "GROUP_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "Attribute(s) to include in the response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "The maximum number of items to return in a page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "The item at which to begin the response",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "0cad09c751a41b64ce113d4f4e1f78de",
+            "name": "Get Enterprise Device Pins",
+            "url": "httpsapi.box.com\/2.0\/enterprises\/{ENTERPRISE_ID}\/device_pinners",
+            "description": "Gets all the device pins within a given enterprise. Must be an enterprise admin with the manage enterprise scope to make this call.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ENTERPRISE_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "marker",
+                    "description": "Needs not be passed or can be empty for first invocation of the API. Use the one returned in response for each subsequent call.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "The maximum number of items to return in a page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "direction",
+                    "description": "Default is \"asc\". Valid values are asc, desc. Case in-sensitive, ASC\/DESC works just fine.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "be8d14c7cc17b7956fe8b9aab0098695",
+            "name": "Get Device Pin",
+            "url": "httpsapi.box.com\/2.0\/device_pinners\/{ID}",
+            "description": "Gets information about an individual device pin.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "d58fdbdab8ca33a891853f0cf3c9c85c",
+            "name": "Delete Device Pin",
+            "url": "httpsapi.box.com\/2.0\/device_pinners\/{ID}",
+            "description": "Delete individual device pin.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "f65b080179db146de55d797bec076ca1",
+            "name": "Create Retention Policy",
+            "url": "httpsapi.box.com\/2.0\/retention_policies",
+            "description": "Used to create a new retention policy.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "b6d4976dc87ccaa673a817cd0c975019",
+            "name": "Get Retention Policies",
+            "url": "httpsapi.box.com\/2.0\/retention_policies",
+            "description": "Retrieves all of the retention policies for the given enterprise.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "policy_name",
+                    "description": "A name to filter the retention policies by. A trailing partial match search is performed.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "policy_type",
+                    "description": "A policy type to filter the retention policies by.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "created_by_user_id",
+                    "description": "A user id to filter the retention policies by.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "0fb6df91b5e5148209936337e93ddc28",
+            "name": "Get Retention Policy",
+            "url": "httpsapi.box.com\/2.0\/retention_policies\/{POLICY_ID}",
+            "description": "Used to retrieve information about a retention policy",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "POLICY_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "5ce2e1345a45b691acd43363aefda05b",
+            "name": "Update Retention Policy",
+            "url": "httpsapi.box.com\/2.0\/retention_policies\/{POLICY_ID}",
+            "description": "Used to update a retention policy.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "POLICY_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "2fa9a5f8261b4f8e6d13162432175fc4",
+            "name": "Get Retention Policy Assignments",
+            "url": "httpsapi.box.com\/2.0\/retention_policies\/{POLICY_ID}\/assignments",
+            "description": "Returns a list of all retention policy assignments associated with a specified retention policy.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "POLICY_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "type",
+                    "description": "The type you want to return in your search. Can be file, folder, or web_link.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "5bc9cad785edb418b3f8ddf65fc92110",
+            "name": "Create Retention Policy Assignment",
+            "url": "httpsapi.box.com\/2.0\/retention_policy_assignments",
+            "description": "Returns a list of all retention policy assignments associated with a specified retention policy.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "4ba06e5334c6f911f98afa5779ba2a5b",
+            "name": "Get Retention Policy Assignment",
+            "url": "httpsapi.box.com\/2.0\/retention_policy_assignments\/{RETENTION_POLICY_ASSIGNMENT_ID}",
+            "description": "Used to retrieve information about a retention policy assignment.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "RETENTION_POLICY_ASSIGNMENT_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "11d6d9be1b8b40739fb87b32bebbe8bf",
+            "name": "Get File Version Retentions",
+            "url": "httpsapi.box.com\/2.0\/file_version_retentions",
+            "description": "Retrieves all file version retentions for the given enterprise.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "file_id",
+                    "description": "A file id to filter the file version retentions by.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "file_version_id",
+                    "description": "A file version id to filter the file version retentions by.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "policy_id",
+                    "description": "A policy id to filter the file version retentions by.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "disposition_action",
+                    "description": "The disposition action of the retention policy. This action can be permanently_delete, which will cause the content retained by the policy to be permanently deleted, or remove_retention, which will lift the retention policy from the content, allowing it to be deleted by users, once the retention policy time period has passed.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "disposition_before",
+                    "description": "See content times for formatting",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "disposition_after",
+                    "description": "See content times for formatting",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "The maximum number of items to return in a page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "marker",
+                    "description": "Needs not be passed or can be empty for first invocation of the API. Use the one returned in response for each subsequent call.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "6bf447fb3931ecff0ec20f980d7721c0",
+            "name": "Get File Version Retention",
+            "url": "httpsapi.box.com\/2.0\/file_version_retentions\/{FILE_VERSION_RETENTION_ID}",
+            "description": "Used to retrieve information about a file version retention",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FILE_VERSION_RETENTION_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "bf929047579476ab5b63259b911ea004",
+            "name": "Create New Legal Hold Policy",
+            "url": "httpsapi.box.com\/2.0\/legal_hold_policies",
+            "description": "Create a new Legal Hold Policy. Optional date filter may be passed. If Policy has a date filter, any Custodian assignments will apply only to file versions created or uploaded inside of the date range.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "150b0ffeb94dcb60028a0c38de151324",
+            "name": "Get Legal Hold Policies",
+            "url": "httpsapi.box.com\/2.0\/legal_hold_policies",
+            "description": "Get a list of Legal Hold Policies that belong to your Enterprise.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "policy_name",
+                    "description": "A name to filter the retention policies by. A trailing partial match search is performed.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "The maximum number of items to return in a page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "marker",
+                    "description": "Needs not be passed or can be empty for first invocation of the API. Use the one returned in response for each subsequent call.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "bf60e76439e5d3370416534ef1c6e1b1",
+            "name": "Update Existing Legal Hold Policy",
+            "url": "httpsapi.box.com\/2.0\/legal_hold_policies\/{ID}",
+            "description": "Update existing Legal Hold Policy. Only name and description can be modified.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "734674476f5b48950bbe9a4f536a230e",
+            "name": "Get Legal Hold Policy",
+            "url": "httpsapi.box.com\/2.0\/legal_hold_policies\/{ID}",
+            "description": "Get details of a single Legal Hold Policy",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "0c329972ebf8b17c69ef241729d55429",
+            "name": "Delete Legal Hold Policy",
+            "url": "httpsapi.box.com\/2.0\/legal_hold_policies\/{ID}",
+            "description": "Sends request to delete an existing Legal Hold Policy. Note that this is an asynchronous process - the Policy will not be fully deleted yet when the response comes back.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "923c5de8d947866532d508d767582fbf",
+            "name": "Get Legal hold policy assignments",
+            "url": "httpsapi.box.com\/2.0\/legal_hold_policies\/{ID}\/assignments",
+            "description": "Get list of assignments for a single Policy.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "d22db2d8612259c6337f3ba5139b0972",
+            "name": "Create New Legal Hold Policy Assignment",
+            "url": "httpsapi.box.com\/2.0\/legal_hold_policy_assignments",
+            "description": "Create a new Assignment, which will apply the Legal Hold Policy to the target of the Assignment.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "6f15a5fb229127c2fc0d1f69d21d0cdf",
+            "name": "Get Legal Hold Policy Assignment",
+            "url": "httpsapi.box.com\/2.0\/legal_hold_policy_assignments\/{ASSIGNMENT_ID}",
+            "description": "Get details of a single assignment.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ASSIGNMENT_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "d9a3abfb8c7b29a27935e0dc240e2e93",
+            "name": "Delete Legal Hold Policy Assignment",
+            "url": "httpsapi.box.com\/2.0\/legal_hold_policy_assignments\/{ASSIGNMENT_ID}",
+            "description": "Sends request to delete an existing Assignment. Note that this is an asynchronous process - the Assignment will not be fully deleted yet when the response comes back.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ASSIGNMENT_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "12d097cd43c6e7909640e39831a6ca19",
+            "name": "Get List of File Version Legal Holds",
+            "url": "httpsapi.box.com\/2.0\/file_version_legal_holds",
+            "description": "Get list of non-deleted Holds for a single Policy.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "policy_id",
+                    "description": "A policy id to filter the file version retentions by.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "6b141e5562cd0eb6024e4a2f0f4dd31c",
+            "name": "Get File Version Legal Hold",
+            "url": "httpsapi.box.com\/2.0\/file_version_legal_holds\/{ID}",
+            "description": "Get details of a single File Version Legal Hold.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "e26dba9ced6cd374aa31fc2761eee9db",
+            "name": "Create Webhook",
+            "url": "httpsapi.box.com\/2.0\/webhooks",
+            "description": "Create Webhook",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "a09e54366df24d72336dcd7eb4240679",
+            "name": "Get Webhooks",
+            "url": "httpsapi.box.com\/2.0\/webhooks",
+            "description": "Returns all defined webhooks for the requesting application and user, up to the limit. If no limit is supplied then Box uses the default limit of 100.\nIf more than limit webhooks are defined then Box returns the webhooks in batches. When the results are batched, Box sends limit webhooks along with a next_marker field in the response object. The value of the next_marker field is a marker string that you can use in later requests to tell Box which batch to send next.\nWhen you send a request that i",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "limit",
+                    "description": "The maximum number of items to return in a page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "marker",
+                    "description": "Needs not be passed or can be empty for first invocation of the API. Use the one returned in response for each subsequent call.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "ac1272512c0f9a1afc152e89ac461202",
+            "name": "Get Webhook",
+            "url": "httpsapi.box.com\/2.0\/webhooks\/{WEBHOOK_ID}",
+            "description": "Get a Webhook",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "WEBHOOK_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "b7d1bf1973206c3db640ca720a5a1d87",
+            "name": "Update Webhook",
+            "url": "httpsapi.box.com\/2.0\/webhooks\/{WEBHOOK_ID}",
+            "description": "Update a Webhook",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "WEBHOOK_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        },
+        {
+            "id": "4c078470087dd53aebbb7c25e062f47b",
+            "name": "Delete Webhook",
+            "url": "httpsapi.box.com\/2.0\/webhooks\/{WEBHOOK_ID}",
+            "description": "Permanently deletes a webhook",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "WEBHOOK_ID",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "rawModeData": ""
+        }
+    ]
+}
