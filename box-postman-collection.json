@@ -1,5 +1,5 @@
 {
-    "id": "b57c96f1c2f44aa56ef001a90bbc9831",
+    "id": "2d2633902cf4f92fbfc85edf1424011b",
     "name": "Box",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "90dcad90d19f5fa9fd29b72a7b912182",
+            "id": "1269941ff4c8839c9bfb60dd976a91be",
             "name": "File upload preflight check",
             "url": "httpsapi.box.com\/2.0\/files\/content",
             "description": "The Pre-flight check API will verify that a file will be accepted by Box before you send all the bytes over the wire.",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "4b78035fe0b994d0bbeb785772045674",
+            "id": "30eaeddf78b904d050920da82a282cd9",
             "name": "Get File's Info, Get Embed Link",
             "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}",
             "description": "Used to retrieve the metadata about a file.",
@@ -75,11 +75,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "0e8dd2727deacd199cf883f21f3d09a3",
+            "id": "40d844c21d06d2e20d239165bf6645f3",
             "name": "Update File Info, Lock and Unlock, Create Shared Link",
             "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}",
             "description": "Used to update individual or multiple fields in the file object, including renaming the file, changing its description, and creating a shared link for the file. To move a file, change the ID of its parent folder. An optional If-Match header can be included to prevent race conditions.\n\nTo lock and unlock files, you execute a PUT operation on the \/files\/{file id} endpoint and set or clear the lock properties on the file.\n\nUsed to create a shared link for this particular file. Please see here for m",
@@ -120,11 +120,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "9ef354564ac6339a6f38c3de600af776",
+            "id": "b34027ba7078a116d2bc36af20897e2c",
             "name": "Delete File",
             "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}",
             "description": "Discards a file to the trash. The etag of the file can be included as an ???If-Match??? header to prevent race conditions.",
@@ -158,11 +158,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "acfa29480717c8456ffc7f374636c87f",
+            "id": "6aaa9f6ed3b5402a29859166f3b9a54e",
             "name": "Restore Item",
             "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}",
             "description": "Restores an item that has been moved to the trash. Default behavior is to restore the item to the folder it was in before it was moved to the trash. If that parent folder no longer exists or if there is now an item with the same name in that parent folder, the new parent folder and\/or new name will need to be included in the request.",
@@ -196,11 +196,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "bea01097a70cceaa0999da68e64953c9",
+            "id": "4a9dac760dde833eda0dedf36343014e",
             "name": "Download File",
             "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/content",
             "description": "Retrieves the actual data of the file. An optional version parameter can be set to download a previous version of the file.",
@@ -248,11 +248,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "dacf4eb021047aa32217b633194dfac2",
+            "id": "3c7a8f30130aafdac4ec2dbcbe3a5c84",
             "name": "View Versions",
             "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/versions",
             "description": "If there are previous versions of this file, this method can be used to retrieve information about the older versions. (Versions are only tracked for Box users with premium accounts.)",
@@ -286,11 +286,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "aeb8e100065a94b9d6deeebb4445441b",
+            "id": "7683a856d36862fae4663d40d1b3349c",
             "name": "Promote Version",
             "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/versions\/current",
             "description": "If there are previous versions of this file, this method can be used to promote one of the older versions to the top of the stack. This actually mints a copy of the old version and puts it on the top of the versions stack. The file will have the exact same contents, the same SHA1\/etag, and the same name as the original. Other properties such as comments do not get updated to their former values.",
@@ -324,11 +324,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "7fde2e404b32af750bb122521dee796d",
+            "id": "56f4d0524349b8215052793640ec7511",
             "name": "Delete Old Version",
             "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/versions\/{VERSION_ID}",
             "description": "Discards a specific file version to the trash. (Depending on the enterprise settings for this user, the item will either be actually deleted from Box or moved to the trash.)",
@@ -369,11 +369,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "71b25804a38c15342127d2162d196e6a",
+            "id": "0672412212e3506aa41d1ba0adc13279",
             "name": "Copy File",
             "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/copy",
             "description": "Used to create a copy of a file in another folder. The original version of the file will not be altered.",
@@ -407,11 +407,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "4e76bb93a309357ab3ecba1a62522588",
+            "id": "d492ac145986780027049c49d087b92f",
             "name": "Get Thumbnail",
             "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/thumbnail.{EXTENSION}",
             "description": "Retrieves a thumbnail, or smaller image representation, of this file. Sizes of 32x32,64x64, 128x128, and 256x256 can be returned in the .png format and sizes of 32x32, 94x94, 160x160, and 320x320 can be returned in the .jpg format. Thumbnails can be generated for the image and video file formats listed here.",
@@ -473,11 +473,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "8987d1d47e56292db0cb3914e6c73f84",
+            "id": "ea19d7c30b27211413363d956cf5ac68",
             "name": "Get Trashed File",
             "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/trash",
             "description": "Retrieves an item that has been moved to the trash.",
@@ -504,11 +504,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "805853d0f3875db1474081c6220e5f87",
+            "id": "113f6d653416807fdb7a777445b073b5",
             "name": "Permanently Delete",
             "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/trash",
             "description": "Permanently deletes an item that is in the trash. The item will no longer exist in Box. This action cannot be undone.",
@@ -535,11 +535,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "03b1c15d4d6c5fa95d6f2d373b7859ad",
+            "id": "cd489e6de34b465bab55956b67016e39",
             "name": "Get File's Comments",
             "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/comments",
             "description": "Retrieves the comments on a particular file, if any exist.",
@@ -573,11 +573,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "efe516d50a5395c1b0dc8d12782ae669",
+            "id": "9be2747ac4e5a5dd0a48874f652539ca",
             "name": "Get File's Collaborations",
             "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/collaborations",
             "description": "Use this to get a list of all the collaborations on a file",
@@ -625,11 +625,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "4dd929cb3548d8b7fb148ee2179f5c29",
+            "id": "e0a99802723a6ef009a4f81e18ec78c6",
             "name": "Get File's Tasks",
             "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/tasks",
             "description": "Retrieves all of the tasks for given file.",
@@ -663,11 +663,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "293cd974db6e957ade41a53759136e10",
+            "id": "8480bbe8bb2fc8d9c8ead0f3fd32e3a6",
             "name": "Create Folder",
             "url": "httpsapi.box.com\/2.0\/folders",
             "description": "Used to create a new empty folder. The new folder will be created inside of the specified parent folder",
@@ -701,11 +701,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "a46fa5d311310a099a19044cfcb99f36",
+            "id": "ad8f010dab0195c11acb21fd55b3f067",
             "name": "Get Folder's Info",
             "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}",
             "description": "Retrieves the full metadata about a folder, including information about when it was last updated as well as the files and folders contained in it. The root folder of a Box account is always represented by the id ???0???.",
@@ -739,11 +739,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "eb10143d829e43798a940ca667428651",
+            "id": "dc9679275e85ca45e16d2af3e7cee455",
             "name": "Update Folder, Create Shared Link, Create or Delete",
             "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}",
             "description": "Used to update information about the folder. To move a folder, update the ID of its parent. To enable an email address that can be used to upload files to this folder, update the folder_upload_email attribute. An optional If-Match header can be included to ensure that client only updates the folder if it knows about the latest version.\n\nUsed to create a shared link for this particular folder. Please see here for more information on the permissions available for shared links. In order to get defa",
@@ -791,11 +791,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "28a31e4122e9ce3b7a05ec01aa0bba28",
+            "id": "556d79937b2cd81624df14cbe04691aa",
             "name": "Delete Folder",
             "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}",
             "description": "Used to delete a folder. A recursive parameter must be included in order to delete folders that have items inside of them. An optional If-Match header can be included to ensure that client only deletes the folder if it knows about the latest version.",
@@ -836,11 +836,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "e36a7ee708229886fdb9a1b271903b97",
+            "id": "cefd27ac99a05290dd112aa3d0a6d22c",
             "name": "Restore Folder",
             "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}",
             "description": "Restores an item that has been moved to the trash. Default behavior is to restore the item to the folder it was in before it was moved to the trash. If that parent folder no longer exists or if there is now an item with the same name in that parent folder, the new parent folder and\/or new name will need to be included in the request.",
@@ -881,11 +881,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "2c0c9109a827a0b46de85a7807169de4",
+            "id": "a03811c412669ade30a37e077c0e683b",
             "name": "Get Folder???s Items",
             "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/items",
             "description": "Retrieves the files and\/or folders contained within this folder without any other metadata about the folder. Any attribute in the full files or folders objects can be passed in with the fields parameter to get specific attributes, and only those specific attributes back; otherwise, the mini format is returned for each item by default. Multiple attributes can be passed in separated by commas e.g. fields=name,created_at. Paginated results can be retrieved using the limit and offset parameters.",
@@ -933,11 +933,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "6bf9d54cab1dc88a307c91a5a2d7cb7b",
+            "id": "df5de23a55d38bbadb743a3ae1e4aa07",
             "name": "Copy Folder",
             "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/copy",
             "description": "Used to create a copy of a folder in another folder. The original version of the folder will not be altered.",
@@ -978,11 +978,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "72ea9921d041739944a3608f38eee075",
+            "id": "5717841f47dbdb474be8a6f51afe8070",
             "name": "Get Folder Collaborations",
             "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/collaborations",
             "description": "Use this to get a list of all the collaborations on a folder i.e. all of the users that have access to that folder.",
@@ -1030,11 +1030,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "5725d7dc1ffb91389c4960c500f0c2ea",
+            "id": "f9a4b38c6f61f52d1ee0a5f6e14c8dfd",
             "name": "Get Trashed Folder",
             "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/trash",
             "description": "Retrieves an folder that has been moved to the trash.",
@@ -1068,11 +1068,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "bc4d95b0ce3915bbf1481430b21c7ca6",
+            "id": "b91e44b29115c3a163515b832f434d85",
             "name": "Permanently Delete",
             "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/trash",
             "description": "Permanently deletes an folder that is in the trash. The item will no longer exist in Box. This action cannot be undone.",
@@ -1099,11 +1099,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "f319dae124d7e0effe7d3babb77c93fb",
+            "id": "d7ab23d3dce934b8f47484ca5e2b346f",
             "name": "Get Trashed Items",
             "url": "httpsapi.box.com\/2.0\/folders\/trash\/items",
             "description": "Retrieves the files and\/or folders that have been moved to the trash. Any attribute in the full files or folders objects can be passed in with the fields parameter to get specific attributes, and only those specific attributes back; otherwise, the mini format is returned for each item by default. Multiple attributes can be passed in separated by commas e.g. fields=name,created_at. Paginated results can be retrieved using the limit and offset parameters.",
@@ -1144,11 +1144,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "c2a9520d033295f9c55237305a0c28c0",
+            "id": "c67aeb0e2d41d158907787121b8a9449",
             "name": "Get Watermark on File",
             "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/watermark",
             "description": "Used to retrieve the watermark for a corresponding Box file.",
@@ -1175,11 +1175,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "b19cf4e298f1dd4f956d33d5d63939bd",
+            "id": "2872be6a2506c95cfa404f8881918cbe",
             "name": "Apply Watermark on File",
             "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/watermark",
             "description": "Used to apply or update the watermark for a corresponding Box file. The endpoint accepts a JSON body describing the watermark to apply.",
@@ -1213,11 +1213,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "c151b59bf798a5043d8c8c7afa11e746",
+            "id": "de498fa352dcdd1181bf59f99f3704a0",
             "name": "Remove Watermark on File",
             "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/watermark",
             "description": "Used to remove the watermark for a corresponding Box file.",
@@ -1244,11 +1244,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "4bd802b163e1de761ad5f4f7cfc06987",
+            "id": "4fe7e3af3179fd305bde2c28be5ba0cd",
             "name": "Get Watermark on Folder",
             "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/watermark",
             "description": "Used to retrieve the watermark for a corresponding Box folder.",
@@ -1275,11 +1275,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "80a7d18ba403158275803aa1166b9d97",
+            "id": "73357031cbb9a8b64cd86c878ef240bf",
             "name": "Apply Watermark on Folder",
             "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/watermark",
             "description": "Used to apply or update the watermark for a corresponding Box folder. The endpoints accepts a JSON body describing the watermark to apply.",
@@ -1313,11 +1313,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "a341fb80d9398ab393f3585bb7cef20d",
+            "id": "952b3770022af0284879842490a88ccb",
             "name": "Remove Watermark on Folder",
             "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/watermark",
             "description": "Used to remove the watermark for a corresponding Box Folder.",
@@ -1344,11 +1344,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "e414afb589249d9897577b0408ae9d5a",
+            "id": "6017b1b5aacbfe939e121b679334b3b6",
             "name": "Create Web Link",
             "url": "httpsapi.box.com\/2.0\/web_links",
             "description": "Creates a web link object within a given folder.",
@@ -1375,11 +1375,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "3f74b03a123187f5695579d77ce973f9",
+            "id": "865999a0a988172544bab6dc86301f67",
             "name": "Get Web Link",
             "url": "httpsapi.box.com\/2.0\/web_links\/{WEB_LINK_ID}",
             "description": "Use to get information about the web link.",
@@ -1413,11 +1413,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "63e716dcd69ba1ed940be6f0d94b81e2",
+            "id": "4f637e95cd0f9b84531978c8cd12003e",
             "name": "Update Web Link",
             "url": "httpsapi.box.com\/2.0\/web_links\/{WEB_LINK_ID}",
             "description": "Updates information for a web link.",
@@ -1458,11 +1458,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "d338fa99339a9121e11cfbb3938cc2ac",
+            "id": "79894a127af212eb76c7e67acb143121",
             "name": "Delete Web Link",
             "url": "httpsapi.box.com\/2.0\/web_links\/{WEB_LINK_ID}",
             "description": "Deletes a web link and moves it to the trash",
@@ -1489,11 +1489,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "d5a81715974d9550452cc31f0b35cec1",
+            "id": "d021cac44ec7a0c8c5212d80a2c1cd74",
             "name": "Create Metadata Template",
             "url": "httpsapi.box.com\/2.0\/metadata_templates\/schema",
             "description": "Used to create a new metadata template with the specified schema.",
@@ -1520,11 +1520,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "ef3d20e3473a93001476619a2bee2bc3",
+            "id": "251cccff3a3310b00987fe67235df444",
             "name": "Get Enterprise Metadata",
             "url": "httpsapi.box.com\/2.0\/metadata_templates\/{SCOPE}",
             "description": "Used to retrieve all metadata templates within a user's enterprise. Currently only the enterprise scope is supported.",
@@ -1551,11 +1551,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "9382b3f9a74836b66e6d0e8b8acb06c0",
+            "id": "968c5998f5da776b59e9d72687f67877",
             "name": "Get Metadata Template",
             "url": "httpsapi.box.com\/2.0\/metadata_templates\/{SCOPE}\/{TEMPLATE}\/schema",
             "description": "Used to retrieve the schema for a given metadata template.",
@@ -1589,11 +1589,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "5102c12b8b7f991aa66b5f47068b4e17",
+            "id": "ee574dbe2ce8b2ec7fd062ab54396751",
             "name": "Update Metadata Template",
             "url": "httpsapi.box.com\/2.0\/metadata_templates\/{SCOPE}\/{TEMPLATE}\/schema",
             "description": "Used to update the schema of an existing template.",
@@ -1634,11 +1634,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "ec45037705278ddcf80307e5b8077b64",
+            "id": "46f7fdc158a8d99fa95d943b2c72e39c",
             "name": "Get all Metadata on File",
             "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/metadata",
             "description": "Used to retrieve all metadata associated with a given file",
@@ -1665,11 +1665,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "4257365511d15d76190a3418fdc9ed3e",
+            "id": "c28ede42423894466a60f9d6ed3e90a4",
             "name": "Create Metadata on File",
             "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/metadata\/{SCOPE}\/{TEMPLATE}",
             "description": "Used to create the metadata template instance for a corresponding Box file. When creating metadata, only values that adhere to the metadata template schema will be accepted.",
@@ -1717,11 +1717,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "2cfb9431ebb73d1cdd14bb812d42f8d0",
+            "id": "aad7f33affacfee8aef6875ef4157334",
             "name": "Get Metadata on File",
             "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/metadata\/{SCOPE}\/{TEMPLATE}",
             "description": "Used to retrieve the metadata template instance for a corresponding Box file.",
@@ -1762,11 +1762,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "53f1ea3cd3a83589e40708195bd49cff",
+            "id": "e2e8f4bc4f16cb775ed34ad6c5ee9289",
             "name": "Update Metadata on File",
             "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/metadata\/{SCOPE}\/{TEMPLATE}",
             "description": "Used to update the template instance. The request body must follow the JSON-Patch specification, which is represented as a JSON array of operation objects (see examples for more details). Updates can be either add, replace, remove , test, move, or copy. The template instance can only be updated if the template instance already exists. When editing metadata, only values that adhere to the metadata template schema will be accepted.\nThe update is applied atomically. If any errors occur during the a",
@@ -1814,11 +1814,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "7a4775849891ce359da5bb5f990ae529",
+            "id": "679fa2443366bf05f1065dd4708f8006",
             "name": "Delete Metadata on File",
             "url": "httpsapi.box.com\/2.0\/files\/{FILE_ID}\/metadata\/{SCOPE}\/{TEMPLATE}",
             "description": "Used to delete the template instance. To delete custom key:value pairs within a template instance, you should refer to the updating metadata section.",
@@ -1859,11 +1859,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "088e1ff12dc453b37d3c76448de52380",
+            "id": "a71730a9d56401b105a87307ffa7cf76",
             "name": "Get All Metadata on Folder",
             "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/metadata",
             "description": "Used to retrieve all metadata associated with a given folder",
@@ -1890,11 +1890,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "9d6c9e4d803e7d27cad78f0928521b9a",
+            "id": "565faf75d7d84aea8d813467cd1bd224",
             "name": "Create Metadata on Folder",
             "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/metadata\/{SCOPE}\/{TEMPLATE}",
             "description": "Used to create the metadata template instance for a corresponding Box folder. When creating metadata, only values that adhere to the metadata template schema will be accepted.",
@@ -1942,11 +1942,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "7edeeb81a997c45d0abfaf9fc8b79134",
+            "id": "661580fcac4634e1e949900262e11582",
             "name": "Get Metadata on Folder",
             "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/metadata\/{SCOPE}\/{TEMPLATE}",
             "description": "Used to retrieve the metadata template instance for a corresponding Box folder.",
@@ -1987,11 +1987,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "890c8eff63e29d371b2bafe412f8115a",
+            "id": "21d23b5a151dbd09355cc77285c9efe7",
             "name": "Update Metadata on Folder",
             "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/metadata\/{SCOPE}\/{TEMPLATE}",
             "description": "Used to update the template instance. Updates can be either add, replace, remove , or test. The template instance can only be updated if the template instance already exists. When editing metadata, only values that adhere to the metadata template schema will be accepted.",
@@ -2039,11 +2039,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "6dea973f2d5c2b26cf2b34e1821b0377",
+            "id": "750edcbf98dd154f4c4bc8df8b1454fb",
             "name": "Delete Metadata on Folder",
             "url": "httpsapi.box.com\/2.0\/folders\/{FOLDER_ID}\/metadata\/{SCOPE}\/{TEMPLATE}",
             "description": "Used to delete the template instance. To delete custom key:value pairs within a template instance, you should refer to the updating metadata section.",
@@ -2084,11 +2084,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "c26349e4edd705cf5b007c0828048ffa",
+            "id": "7cfe9ec829f8bdf0e5a8b93eb5b4daa0",
             "name": "Pending Collaborations",
             "url": "httpsapi.box.com\/2.0\/collaborations",
             "description": "Used to retrieve all pending collaboration invites for this user.",
@@ -2122,11 +2122,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "b1d6ee66ef44d5d6266204315d736111",
+            "id": "d90aa1b5cf17ac1ecb76a0c9b83b2f90",
             "name": "Create Collaboration",
             "url": "httpsapi.box.com\/2.0\/collaborations",
             "description": "Used to add a collaboration for a single user or a single group to a folder. Either an email address, a user ID, or a group id can be used to create the collaboration. If the collaboration is being created with a group, access to this endpoint is granted based on the group's invitability_level.",
@@ -2153,11 +2153,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "dfb0a291c877f81158eeb6ef76efbc6e",
+            "id": "fc1ca50bdc9ffddf6b8e6f9342bf9cb8",
             "name": "Get Collaboration",
             "url": "httpsapi.box.com\/2.0\/collaborations\/{COLLAB_ID}",
             "description": "Used to get information about a single collaboration. All collaborations for a single folder can be retrieved through GET \/folders\/{id}\/collaborations. A complete list of the user???s pending collaborations can also be retrieved.",
@@ -2198,11 +2198,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "fdb3899310e4507b26982e9d35c164be",
+            "id": "50e1577631716ac5dbc133af83b86b25",
             "name": "Update Collaboration",
             "url": "httpsapi.box.com\/2.0\/collaborations\/{COLLAB_ID}",
             "description": "Used to edit an existing collaboration. Descriptions of the various roles can be found here.",
@@ -2236,11 +2236,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "98a29f445a73911f3b3dad619e89c88b",
+            "id": "00ef1d7ca5b45abccbc2bbd361ff8fdc",
             "name": "Delete Collaboration",
             "url": "httpsapi.box.com\/2.0\/collaborations\/{COLLAB_ID}",
             "description": "Used to delete a single collaboration.",
@@ -2267,11 +2267,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "845aa4578eaa7ba4dcd02595bea09701",
+            "id": "b9c8ec9adaba0b8ae4379aab712cd6a9",
             "name": "Searching for Content",
             "url": "httpsapi.box.com\/2.0\/search",
             "description": "The search endpoint provides a powerful way of finding items that are accessible by a single user or an entire enterprise. Leverage the parameters listed below to generate targeted advanced searches.",
@@ -2389,11 +2389,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "6c855acad5d0db212a5c702e42fdc26b",
+            "id": "db03122f0c51f3c2bb7630baabf2c915",
             "name": "Shared Items",
             "url": "httpsapi.box.com\/2.0\/shared_items",
             "description": "Shared items are any files or folders that are represented by a shared link. Shared items are different from other API resources in that a shared resource doesn???t necessarily have to be in the account of the user accessing it. The actual shared link itself is used along with a normal access token.\nUsed to retrieve the metadata about a shared item when only given a shared link. Because of varying permission for shared links, a password may be required to retrieve the shared item. Once the item ",
@@ -2420,11 +2420,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "df700b0d2ea8f3acc4ecac3947a7f552",
+            "id": "216aa3f30f1085f11f62c0268c3c44cb",
             "name": "Get Collections",
             "url": "httpsapi.box.com\/2.0\/collections",
             "description": "Retrieves the collections for the given user. Currently, only the favorites collection is supported.",
@@ -2443,11 +2443,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "5db08d9d2c60980f7167ea85786b05f6",
+            "id": "f8de1e40afd440ff7b5fd1c41150335d",
             "name": "Get Collection Items",
             "url": "httpsapi.box.com\/2.0\/collections\/{COLLECTION_ID}\/items",
             "description": "Retrieves the files and\/or folders contained within this collection. Collection item lists behave a lot like getting a folder???s items.\nPaginated results can be retrieved using the limit and offset parameters.\nSub-object fields can be requested via the ?fields parameter",
@@ -2495,11 +2495,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "633239c04dbe11fd1d979c1cb9d96388",
+            "id": "7ca697196882eba2d7b36a4c2657aab0",
             "name": "Create Comment",
             "url": "httpsapi.box.com\/2.0\/comments",
             "description": "Used to add a comment by the user to a specific file or comment (i.e. as a reply comment).",
@@ -2533,11 +2533,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "28be7c5f7b6b938689175f8ba47d4df0",
+            "id": "a2028ae3397c4367ec6a42a031f519a9",
             "name": "Get Comment",
             "url": "httpsapi.box.com\/2.0\/comments\/{COMMENT_ID}",
             "description": "Used to retrieve the message and metadata about a specific comment. Information about the user who created the comment is also included.",
@@ -2571,11 +2571,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "44dc95e2c2f8a20648f4875ca46235df",
+            "id": "58dc1f5c6e3e973d4d145e062a79bfb8",
             "name": "Update Comment",
             "url": "httpsapi.box.com\/2.0\/comments\/{COMMENT_ID}",
             "description": "Used to update the message of the comment.",
@@ -2616,11 +2616,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "f1dd7e43eab1fac8c583df6ed3b973f9",
+            "id": "761f1424a662bbb77285d76113abcc59",
             "name": "Delete Comment",
             "url": "httpsapi.box.com\/2.0\/comments\/{COMMENT_ID}",
             "description": "Permanently deletes a comment.",
@@ -2647,11 +2647,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "c548a63e2039237fa581b02d35824152",
+            "id": "0e2a96ab9401399a9c436169e9007eb3",
             "name": "Create Task",
             "url": "httpsapi.box.com\/2.0\/tasks",
             "description": "Used to create a single task for single user on a single file.",
@@ -2678,11 +2678,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "ba4b81040d0f10518fb67f0f50ffdd52",
+            "id": "d0df24bb179c126fde55bec4e3e9bfeb",
             "name": "Get Task",
             "url": "httpsapi.box.com\/2.0\/tasks\/{TASK_ID}",
             "description": "Fetches a specific task.",
@@ -2716,11 +2716,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "c332e7186e837f8e51dfd3fc5f510371",
+            "id": "ab47cb8de2a71fbd4d791faa1e91dfe5",
             "name": "Update Task",
             "url": "httpsapi.box.com\/2.0\/tasks\/{TASK_ID}",
             "description": "Updates a specific task.",
@@ -2761,11 +2761,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "f083854d164d8c697a24d0e810e471cf",
+            "id": "604e4c0fd007dc006efa43ac7f2f7b0c",
             "name": "Delete Task",
             "url": "httpsapi.box.com\/2.0\/tasks\/{TASK_ID}",
             "description": "Permanently deletes a specific task.",
@@ -2792,11 +2792,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "831ef89c9cd7e94670459eb25d54f447",
+            "id": "c92bec08a93b8b9085fc5cb75f27f48e",
             "name": "Get Assignments",
             "url": "httpsapi.box.com\/2.0\/tasks\/{TASK_ID}\/assignments",
             "description": "Retrieves all of the assignments for a given task.",
@@ -2830,11 +2830,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "e987c26e33b205f93c181c99477d72ef",
+            "id": "6289eaf331d75388a42f6a0473fea103",
             "name": "Create Task Assignment",
             "url": "httpsapi.box.com\/2.0\/task_assignments",
             "description": "Used to assign a task to a single user. There can be multiple assignments on a given task.",
@@ -2861,11 +2861,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "9330286ff1f224fda4cbd05eeedc6b6d",
+            "id": "a28e0ec12935850eb7eb72d9c82903c4",
             "name": "Get Task Assignment",
             "url": "httpsapi.box.com\/2.0\/task_assignments\/{TASK_ASSIGNMENT_ID}",
             "description": "Fetches a specific task assignment.",
@@ -2899,11 +2899,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "f7cae517e692420426ae07b4ac880755",
+            "id": "dc506566e72ca0d78675e1ac49759e88",
             "name": "Update Task Assignment",
             "url": "httpsapi.box.com\/2.0\/task_assignments\/{TASK_ASSIGNMENT_ID}",
             "description": "Used to update a task assignment.",
@@ -2937,11 +2937,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "44880facb56917d868ffcc5a1bed2a5e",
+            "id": "c71312d778efaf4a40bc576e745d8a8a",
             "name": "Delete Task Assignment",
             "url": "httpsapi.box.com\/2.0\/task_assignments\/{TASK_ASSIGNMENT_ID}",
             "description": "Deletes a specific task assignment.",
@@ -2968,11 +2968,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "fd4034e3b466b82e5bb5554e2076f7f5",
+            "id": "8145244264daa83dd4eaf984b0156da8",
             "name": "User Events, Enterprise Events",
             "url": "httpsapi.box.com\/2.0\/events",
             "description": "Use this to get events for a given user. A chunk of event objects is returned for the user based on the parameters passed in. Parameters indicating how many chunks are left as well as the next stream_position are also returned.\n\nTo retrieve Enterprise Events specify 'stream_type=admin_logs'. Retrieves up to a year' events for all users in an enterprise. Upper and lower bounds as well as filters can be applied to the results.",
@@ -3034,11 +3034,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "685311057ede94d15e32ac655c355b91",
+            "id": "6fb1b4ecb24136b182895e60ea42116e",
             "name": "Long polling",
             "url": "httpsapi.box.com\/2.0\/events",
             "description": "To get real-time notification of activity in a Box account, use the long poll feature of the \/events API. To do so, first call the \/events API with an OPTIONS call to retrieve the long poll URL to use. Next, make a GET request to the provided URL to begin listening for events. If an event occurs within an account you are monitoring, you will receive a response with the value new_change. It???s important to note that this response will not come with any other details, but should serve as a prompt",
@@ -3057,11 +3057,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "36f23da5b11f270632366b1b918e59e5",
+            "id": "e7b35ccf4a90b05c7667ed297791c3ef",
             "name": "Create User",
             "url": "httpsapi.box.com\/2.0\/users",
             "description": "Used to provision a new user in an enterprise. This method only works for enterprise admins.",
@@ -3095,11 +3095,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "1cdfb5b095085ce6197f6458ee0e7294",
+            "id": "98a1e01b2a032f471a865c880ba475bb",
             "name": "Get Enterprise Users",
             "url": "httpsapi.box.com\/2.0\/users",
             "description": "Returns a list of all users for the Enterprise along with their user_id, public_name, and login.",
@@ -3154,11 +3154,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "ac5860e2282b1f556daca2e8de376370",
+            "id": "2c32cd14b87783163cce5739ad7f596a",
             "name": "Get Current User",
             "url": "httpsapi.box.com\/2.0\/users\/me",
             "description": "Retrieves information about the user who is currently logged in i.e. the user for whom this auth token was generated.",
@@ -3185,11 +3185,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "6f62245c7d4e4426478ea98331c70bc2",
+            "id": "94ba908e7f544d861d251474888c416c",
             "name": "Get User's Info",
             "url": "httpsapi.box.com\/2.0\/users\/{USER_ID}",
             "description": "Retrieves information about a user in the enterprise. Requires enterprise administration authorization.",
@@ -3223,11 +3223,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "95d2ea1123883862f8f1f0460722532e",
+            "id": "a48e7be3f05c74f3223459640333e9f6",
             "name": "Update User, Change User's Login",
             "url": "httpsapi.box.com\/2.0\/users\/{USER_ID}",
             "description": "Used to edit the settings and information about a user. This method only works for enterprise admins. To roll a user out of the enterprise (and convert them to a standalone free user), update the special enterprise attribute to be null.\n\nUsed to convert one of the user???s confirmed email aliases into the user???s primary login.",
@@ -3268,11 +3268,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "551a489cba12308bdccdef437f8c5e45",
+            "id": "92fba200bf26993b719e5189ba63a62a",
             "name": "Delete User",
             "url": "httpsapi.box.com\/2.0\/users\/{USER_ID}",
             "description": "Deletes a user in an enterprise account.",
@@ -3313,11 +3313,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "c25e63255119b0d25e82385959db065a",
+            "id": "e59fed78238a892789ee7ba34565910c",
             "name": "Move User's Folder",
             "url": "httpsapi.box.com\/2.0\/users\/{USER_ID}\/folders\/{FOLDER_ID}",
             "description": "Moves all of the owned content from within one user???s folder into a new folder in another user???s account. You can move folders across users as long as the you have administrative permissions and the ???source??? user owns the folders. To move everything from the root folder, use ???0??? which always represents the root folder of a Box account.",
@@ -3372,11 +3372,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "1e5dcdd66a8fbdeb47e40c218fb5fc85",
+            "id": "c08bbd71d82709023d0c9f0df25201e1",
             "name": "Get Email Aliases",
             "url": "httpsapi.box.com\/2.0\/users\/{USER_ID}\/email_aliases",
             "description": "Retrieves all email aliases for this user. The collection of email aliases does not include the primary login for the user; use GET \/users\/USER_ID to retrieve the login email address.",
@@ -3403,11 +3403,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "369e9b66a969296049ca185e9f2be823",
+            "id": "84d027feee377112cf929dd3060303f7",
             "name": "Add Email Alias",
             "url": "httpsapi.box.com\/2.0\/users\/{USER_ID}\/email_aliases",
             "description": "Adds a new email alias to the given user???s account.",
@@ -3441,11 +3441,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "d391d26423275748e186f4662f976e24",
+            "id": "b59a7eec29b202d4a527e8aa38bf8d91",
             "name": "Delete Email Alias",
             "url": "httpsapi.box.com\/2.0\/users\/{USER_ID}\/email_aliases\/{EMAIL_ALIAS_ID}",
             "description": "Removes an email alias from a user.",
@@ -3479,11 +3479,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "70c104134f116758564fe0f6233b9a43",
+            "id": "2ebdbaafda040e7ea5fc6dbbea3adb2d",
             "name": "Invite User",
             "url": "httpsapi.box.com\/2.0\/invites",
             "description": "Invites an existing user to join an Enterprise. The existing user can not be part of another Enterprise and must already have a Box account. Once invited, the user will receive an email and prompt to accept the invitation within the Box web application. This method requires the \"Manage An Enterprise\" scope for the enterprise, which can be enabled within your developer console.",
@@ -3517,11 +3517,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "e80fce33a8337c57ebeb523bcc823bd4",
+            "id": "06226f1cc964fff036f38ccaf15d0397",
             "name": "Get status of the invite",
             "url": "httpsapi.box.com\/2.0\/invites\/{INVITE_ID}",
             "description": "",
@@ -3555,11 +3555,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "5d9a211f0b127795dde63bc36c9bffe3",
+            "id": "d98a5c1d365af7f159619ac2fc382302",
             "name": "Create Group",
             "url": "httpsapi.box.com\/2.0\/groups",
             "description": "Used to create a group.",
@@ -3593,11 +3593,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "57cc6f0d2c3733a3e9c9a916f1ea3722",
+            "id": "f94177f155f08c31d6dc0d158be1f428",
             "name": "Get Groups for an Enterprise",
             "url": "httpsapi.box.com\/2.0\/groups",
             "description": "Retrieves all of the groups for given enterprise. Must have permissions to see an enterprise's groups.",
@@ -3638,11 +3638,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "415bbb17d372fa40b3cbe0bf58444b6b",
+            "id": "9e9fb48027aee61877b04b213cc0d1e8",
             "name": "Get Group",
             "url": "httpsapi.box.com\/2.0\/groups\/{GROUP_ID}",
             "description": "Used to get information about a group.",
@@ -3676,11 +3676,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "50efa641a01031d99e2c4d35af4ed504",
+            "id": "d9ede46c0b1f7f0d223ac1244aecaf91",
             "name": "Update Group",
             "url": "httpsapi.box.com\/2.0\/groups\/{GROUP_ID}",
             "description": "Updates a specific group.",
@@ -3721,11 +3721,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "b4b5f715e0b5911e64acc623db745865",
+            "id": "ca9048436011472f53844d2d04d764fd",
             "name": "Delete Group",
             "url": "httpsapi.box.com\/2.0\/groups\/{GROUP_ID}",
             "description": "Permanently deletes a specific group.",
@@ -3752,11 +3752,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "30a853e8e8a0768aa81f14a05c99535c",
+            "id": "31b771f3b6447999c44924db69d20563",
             "name": "Create Membership",
             "url": "httpsapi.box.com\/2.0\/group_memberships",
             "description": "Used to add a member to a Group.",
@@ -3790,11 +3790,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "e619019e823f56077c6f6fc56c31e815",
+            "id": "7338591ae5a0a3bee80c7f0c4468f86e",
             "name": "Get Membership",
             "url": "httpsapi.box.com\/2.0\/group_memberships\/{GROUP_MEMBERSHIP_ID}",
             "description": "Fetches a specific group membership entry.",
@@ -3828,11 +3828,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "62697170e8184114e8cf90501bb389d2",
+            "id": "1b1ab326ab6a4a0594c777d98e460651",
             "name": "Update Membership",
             "url": "httpsapi.box.com\/2.0\/group_memberships\/{GROUP_MEMBERSHIP_ID}",
             "description": "Used to update a group membership.",
@@ -3873,11 +3873,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "3886a7b1b763c596c84457609ccc2007",
+            "id": "020a494796f48876f2a8ef9407fd2ee7",
             "name": "Delete Membership",
             "url": "httpsapi.box.com\/2.0\/group_memberships\/{GROUP_MEMBERSHIP_ID}",
             "description": "Deletes a specific group membership.",
@@ -3904,11 +3904,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "73ea9d0a8a48d8a3d8eb587ae4d69f03",
+            "id": "f42567aa10144e06aff77adce5bd0057",
             "name": "Get Memberships for Group",
             "url": "httpsapi.box.com\/2.0\/groups\/{GROUP_ID}\/memberships",
             "description": "Retrieves all of the members for a given group if the requesting user has access (see Group Object member_viewability_level).",
@@ -3956,11 +3956,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "2e8f32c2fadb551031d87b4a5610a1e7",
+            "id": "db86a9850f266aff56cec681e2c79931",
             "name": "Get Memberships for User",
             "url": "httpsapi.box.com\/2.0\/users\/{USER_ID}\/memberships",
             "description": "Retrieves all of the group memberships for a given user. Note this is only available to group admins. To retrieve group memberships for the user making the API request, use the users\/me\/memberships endpoint.",
@@ -4008,11 +4008,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "1121cae6c5aa1ab3fa1951c1ea8fb942",
+            "id": "022c1c31e1d42e4ac86ae177919ee41a",
             "name": "Get Collaborations for Group",
             "url": "httpsapi.box.com\/2.0\/groups\/{GROUP_ID}\/collaborations",
             "description": "Retrieves all of the group collaborations for a given group. Note this is only available to group admins.",
@@ -4060,11 +4060,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "0cad09c751a41b64ce113d4f4e1f78de",
+            "id": "43288a2366e43575bca7176a267713fd",
             "name": "Get Enterprise Device Pins",
             "url": "httpsapi.box.com\/2.0\/enterprises\/{ENTERPRISE_ID}\/device_pinners",
             "description": "Gets all the device pins within a given enterprise. Must be an enterprise admin with the manage enterprise scope to make this call.",
@@ -4112,11 +4112,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "be8d14c7cc17b7956fe8b9aab0098695",
+            "id": "af8e3a620db54e299a45bd4df8998f4d",
             "name": "Get Device Pin",
             "url": "httpsapi.box.com\/2.0\/device_pinners\/{ID}",
             "description": "Gets information about an individual device pin.",
@@ -4143,11 +4143,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "d58fdbdab8ca33a891853f0cf3c9c85c",
+            "id": "69779771b686fccadee86f2ce5b4085b",
             "name": "Delete Device Pin",
             "url": "httpsapi.box.com\/2.0\/device_pinners\/{ID}",
             "description": "Delete individual device pin.",
@@ -4174,11 +4174,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "f65b080179db146de55d797bec076ca1",
+            "id": "bd41ecb271c3e38bdcdb208b1703d77a",
             "name": "Create Retention Policy",
             "url": "httpsapi.box.com\/2.0\/retention_policies",
             "description": "Used to create a new retention policy.",
@@ -4205,11 +4205,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "b6d4976dc87ccaa673a817cd0c975019",
+            "id": "1ec542e16786c2c73864812034a8b96d",
             "name": "Get Retention Policies",
             "url": "httpsapi.box.com\/2.0\/retention_policies",
             "description": "Retrieves all of the retention policies for the given enterprise.",
@@ -4250,11 +4250,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "0fb6df91b5e5148209936337e93ddc28",
+            "id": "ee230f28ad26c655d3109a433ccf6860",
             "name": "Get Retention Policy",
             "url": "httpsapi.box.com\/2.0\/retention_policies\/{POLICY_ID}",
             "description": "Used to retrieve information about a retention policy",
@@ -4281,11 +4281,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "5ce2e1345a45b691acd43363aefda05b",
+            "id": "bbb5dfe51d90ffb68c998a22f81c9a54",
             "name": "Update Retention Policy",
             "url": "httpsapi.box.com\/2.0\/retention_policies\/{POLICY_ID}",
             "description": "Used to update a retention policy.",
@@ -4319,11 +4319,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "2fa9a5f8261b4f8e6d13162432175fc4",
+            "id": "e7deef8c101184b73d9e33b287a70b91",
             "name": "Get Retention Policy Assignments",
             "url": "httpsapi.box.com\/2.0\/retention_policies\/{POLICY_ID}\/assignments",
             "description": "Returns a list of all retention policy assignments associated with a specified retention policy.",
@@ -4357,11 +4357,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "5bc9cad785edb418b3f8ddf65fc92110",
+            "id": "80ea1b0347a1a75d1a47fc1cf4f4e193",
             "name": "Create Retention Policy Assignment",
             "url": "httpsapi.box.com\/2.0\/retention_policy_assignments",
             "description": "Returns a list of all retention policy assignments associated with a specified retention policy.",
@@ -4388,11 +4388,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "4ba06e5334c6f911f98afa5779ba2a5b",
+            "id": "ece578f0b9d45b0a75d2e3c2a58bc0fe",
             "name": "Get Retention Policy Assignment",
             "url": "httpsapi.box.com\/2.0\/retention_policy_assignments\/{RETENTION_POLICY_ASSIGNMENT_ID}",
             "description": "Used to retrieve information about a retention policy assignment.",
@@ -4419,11 +4419,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "11d6d9be1b8b40739fb87b32bebbe8bf",
+            "id": "740e30e1ba3bdd777b58c43884a71359",
             "name": "Get File Version Retentions",
             "url": "httpsapi.box.com\/2.0\/file_version_retentions",
             "description": "Retrieves all file version retentions for the given enterprise.",
@@ -4499,11 +4499,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "6bf447fb3931ecff0ec20f980d7721c0",
+            "id": "34497a9a100762883ff30dcea2c47cd5",
             "name": "Get File Version Retention",
             "url": "httpsapi.box.com\/2.0\/file_version_retentions\/{FILE_VERSION_RETENTION_ID}",
             "description": "Used to retrieve information about a file version retention",
@@ -4530,11 +4530,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "bf929047579476ab5b63259b911ea004",
+            "id": "f747218956d533d2ba07103d2ccac019",
             "name": "Create New Legal Hold Policy",
             "url": "httpsapi.box.com\/2.0\/legal_hold_policies",
             "description": "Create a new Legal Hold Policy. Optional date filter may be passed. If Policy has a date filter, any Custodian assignments will apply only to file versions created or uploaded inside of the date range.",
@@ -4561,11 +4561,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "150b0ffeb94dcb60028a0c38de151324",
+            "id": "09f603660f22dbba8c680bcf2340b917",
             "name": "Get Legal Hold Policies",
             "url": "httpsapi.box.com\/2.0\/legal_hold_policies",
             "description": "Get a list of Legal Hold Policies that belong to your Enterprise.",
@@ -4606,11 +4606,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "bf60e76439e5d3370416534ef1c6e1b1",
+            "id": "2123820eb9386426a5e9be92e2e592cd",
             "name": "Update Existing Legal Hold Policy",
             "url": "httpsapi.box.com\/2.0\/legal_hold_policies\/{ID}",
             "description": "Update existing Legal Hold Policy. Only name and description can be modified.",
@@ -4644,11 +4644,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "734674476f5b48950bbe9a4f536a230e",
+            "id": "2bfdc135d5b2fb048d156f5f9b6bf53e",
             "name": "Get Legal Hold Policy",
             "url": "httpsapi.box.com\/2.0\/legal_hold_policies\/{ID}",
             "description": "Get details of a single Legal Hold Policy",
@@ -4675,11 +4675,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "0c329972ebf8b17c69ef241729d55429",
+            "id": "6a48a446dbed296f040afd0fa8958e37",
             "name": "Delete Legal Hold Policy",
             "url": "httpsapi.box.com\/2.0\/legal_hold_policies\/{ID}",
             "description": "Sends request to delete an existing Legal Hold Policy. Note that this is an asynchronous process - the Policy will not be fully deleted yet when the response comes back.",
@@ -4706,11 +4706,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "923c5de8d947866532d508d767582fbf",
+            "id": "eb784f2e0c93d2932d4182c29fb533f6",
             "name": "Get Legal hold policy assignments",
             "url": "httpsapi.box.com\/2.0\/legal_hold_policies\/{ID}\/assignments",
             "description": "Get list of assignments for a single Policy.",
@@ -4737,11 +4737,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "d22db2d8612259c6337f3ba5139b0972",
+            "id": "d64bff25b3940e3225e0280128c6f476",
             "name": "Create New Legal Hold Policy Assignment",
             "url": "httpsapi.box.com\/2.0\/legal_hold_policy_assignments",
             "description": "Create a new Assignment, which will apply the Legal Hold Policy to the target of the Assignment.",
@@ -4768,11 +4768,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "6f15a5fb229127c2fc0d1f69d21d0cdf",
+            "id": "98072807fbdc9d860e38adad0cf61999",
             "name": "Get Legal Hold Policy Assignment",
             "url": "httpsapi.box.com\/2.0\/legal_hold_policy_assignments\/{ASSIGNMENT_ID}",
             "description": "Get details of a single assignment.",
@@ -4799,11 +4799,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "d9a3abfb8c7b29a27935e0dc240e2e93",
+            "id": "1a080bc5334b3ce3dcbba079ad3e0ee6",
             "name": "Delete Legal Hold Policy Assignment",
             "url": "httpsapi.box.com\/2.0\/legal_hold_policy_assignments\/{ASSIGNMENT_ID}",
             "description": "Sends request to delete an existing Assignment. Note that this is an asynchronous process - the Assignment will not be fully deleted yet when the response comes back.",
@@ -4830,11 +4830,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "12d097cd43c6e7909640e39831a6ca19",
+            "id": "810de7c42eadf3cc3cad30cd70d44540",
             "name": "Get List of File Version Legal Holds",
             "url": "httpsapi.box.com\/2.0\/file_version_legal_holds",
             "description": "Get list of non-deleted Holds for a single Policy.",
@@ -4861,11 +4861,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "6b141e5562cd0eb6024e4a2f0f4dd31c",
+            "id": "ff71d1e55cf824f008b67b2f37626ce8",
             "name": "Get File Version Legal Hold",
             "url": "httpsapi.box.com\/2.0\/file_version_legal_holds\/{ID}",
             "description": "Get details of a single File Version Legal Hold.",
@@ -4892,11 +4892,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "e26dba9ced6cd374aa31fc2761eee9db",
+            "id": "76cb2041a4f68750f21c6f1f450c6dcb",
             "name": "Create Webhook",
             "url": "httpsapi.box.com\/2.0\/webhooks",
             "description": "Create Webhook",
@@ -4923,11 +4923,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "a09e54366df24d72336dcd7eb4240679",
+            "id": "61f942b4dcc3cf2f52b203d41ad66996",
             "name": "Get Webhooks",
             "url": "httpsapi.box.com\/2.0\/webhooks",
             "description": "Returns all defined webhooks for the requesting application and user, up to the limit. If no limit is supplied then Box uses the default limit of 100.\nIf more than limit webhooks are defined then Box returns the webhooks in batches. When the results are batched, Box sends limit webhooks along with a next_marker field in the response object. The value of the next_marker field is a marker string that you can use in later requests to tell Box which batch to send next.\nWhen you send a request that i",
@@ -4961,11 +4961,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "ac1272512c0f9a1afc152e89ac461202",
+            "id": "0241019acd06f5998c1912f987a0d84a",
             "name": "Get Webhook",
             "url": "httpsapi.box.com\/2.0\/webhooks\/{WEBHOOK_ID}",
             "description": "Get a Webhook",
@@ -4992,11 +4992,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "b7d1bf1973206c3db640ca720a5a1d87",
+            "id": "43d7a0b794d5adf0af1b5d1a6d69f840",
             "name": "Update Webhook",
             "url": "httpsapi.box.com\/2.0\/webhooks\/{WEBHOOK_ID}",
             "description": "Update a Webhook",
@@ -5030,11 +5030,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         },
         {
-            "id": "4c078470087dd53aebbb7c25e062f47b",
+            "id": "028ab74b981db634b50afc96fc8a3282",
             "name": "Delete Webhook",
             "url": "httpsapi.box.com\/2.0\/webhooks\/{WEBHOOK_ID}",
             "description": "Permanently deletes a webhook",
@@ -5061,7 +5061,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b57c96f1c2f44aa56ef001a90bbc9831",
+            "collectionId": "2d2633902cf4f92fbfc85edf1424011b",
             "rawModeData": ""
         }
     ]
